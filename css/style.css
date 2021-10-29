@@ -1,4 +1,5 @@
 *{margin: 0;padding: 0;}
 body{background-color: #fff;height: 100vh;}
 .phone{width: 541px; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);background: url(../img/phone.png) no-repeat;}
+iframe{width: 100%;height: 100%gi;}
 .content{width: 414px;height: 736px;position: absolute; top: 125px; left: 64px;}
