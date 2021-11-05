@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 /* 여백 초기화 */
 *{margin: 0;padding: 0; box-sizing: border-box;}
+
 /* a 링크 초기화 */
 body{font-family:'Noto Sans KR'; color: #000;}
 a {text-decoration: none;color: #000;}
