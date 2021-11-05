@@ -26,7 +26,7 @@ body{overflow-X:hidden}
 .main-page{width: 100%;height: 100%;}
 /* 메인 스와이퍼 */
 .swiper{width: 100%;height: 100%;}
-/* .swiper{max-width: 853px;} */
+.swiper{max-width: 853px;}
 .button-next,.button-prev{position: absolute; top: 60%; width: 40px;height:45px; z-index: 10;background-size: 65px auto;background-image: url(../img/icon.png);}
 .button-next{right: 0; background-position: 0 -45px;}
 .graph{position: absolute; bottom:10%;left:50%;transform: translateX(-50%); z-index: 999;padding-left: 10%;}
