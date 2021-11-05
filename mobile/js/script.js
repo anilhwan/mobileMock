@@ -9,6 +9,7 @@ slide.click(function(){
     return false;
  });
 
- $('.menu').click(function(){
-     $('.side-menu').stop().animate({left:0})
- })
+$('.menu-box').click(function(){
+   $(this).toggleClass('add')
+   $('.side-menu').toggleClass('slide')
+})
