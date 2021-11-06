@@ -21,3 +21,6 @@ video,img {width: 100%;}
 #skip>li{width:100%;height:auto;font-size:0;}
 #skip>li>a{display:block;padding:0;font-size:0;text-align:center;color:#fff;background:#000;}
 #skip>li>a:focus{padding:20px;font-size:16px;}
+
+
+button{cursor: pointer; border: none; font-size: 0; text-indent: -99999999em; line-height: 0;}
