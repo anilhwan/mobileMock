@@ -81,7 +81,7 @@ var msnry = new Masonry( '.live-content', {
    gutter : 0,
    });
    imagesLoaded( '.live-content' ).on( 'progress', function() {
-   msnry.layout();
+      msnry.layout();
    });
 
 $('.top-btn').click(function(){
