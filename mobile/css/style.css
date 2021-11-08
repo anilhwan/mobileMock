@@ -1,6 +1,7 @@
 @charset "utf-8";
 body{overflow-y: scroll;}
 .header{height: 62px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed;top: 0;left: 0;}
+.scroll{overflow: hidden; height: 100%;}
 .fix{border-bottom: 1px solid #ddd;background-color: #fff; z-index: 9999999;}
 .logo{width: 74px;height: 62px;}
 /* 메뉴버튼 */
@@ -45,7 +46,7 @@ body{overflow-y: scroll;}
 .mc-live .live-content li span{padding: 15px 20px; font-weight: 500; color: #808080; display: block;}
 
 .more-btn{background: url(../img/more.png) no-repeat; width: 70px;height: 70px; margin:50px auto; background-size: 70px; display: block;}
-.top-btn{background: url(../img/topbtn.png) no-repeat; width: 50px;height: 50px; background-size:50px; display: block; position: fixed; right: 15px; bottom: 75px; z-index: 9999;}
+.top-btn{background: url(../img/topbtn.png) no-repeat; width: 50px;height: 50px; background-size:50px; display: block; position: fixed; right: 15px; bottom: 75px; z-index: 10;}
 .fix-top{position: absolute;bottom: 140px; right: 20px;}
 
 /* 맥딜리버리 매장찾기 메뉴 */

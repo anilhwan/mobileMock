@@ -13,6 +13,7 @@ slide.click(function(){
 $('.menu-box').click(function(){
    $(this).toggleClass('add')
    $('.side-menu').toggleClass('slide')
+   $('body').toggleClass('scroll')
 })
 
 var btn =$('.graph').find('button')
