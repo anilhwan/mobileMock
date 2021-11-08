@@ -76,9 +76,8 @@ topBtn.click(function(){
 // 라이브 상품들 정렬 masonry 라이브러리 사용
 var msnry = new Masonry( '.live-content', {
    itemSelector: 'li',
-   // columnWidth: 200
    percentPosition: true,
-   gutter : 5,
+   gutter : 0,
    });
    imagesLoaded( '.live-content' ).on( 'progress', function() {
       msnry.layout();
