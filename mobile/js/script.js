@@ -68,11 +68,21 @@ $(window).scroll(function(){
        
    });
 // 라이브 상품들 정렬
-$('.live-content').masonry({
-   itemSelector:'li', //이미지가 포함된 엘리먼트
-   gutter: 0, //margin
-   horizontalOrder:true //순서대로 정렬   
-});           
+// $('.live-content').masonry({
+//    itemSelector:'li', //이미지가 포함된 엘리먼트
+//    gutter: 0, //margin
+//    horizontalOrder:true //순서대로 정렬   
+// });
+
+var msnry = new Masonry( '.live-content', {
+   itemSelector: 'li',
+   // columnWidth: 200
+   percentPosition: true,
+   gutter : 0,
+   });
+   imagesLoaded( '.live-content' ).on( 'progress', function() {
+   msnry.layout();
+   });
 
 $('.top-btn').click(function(){
    $('html,body').animate({ scrollTop : $('body').offset().top-500},500);
