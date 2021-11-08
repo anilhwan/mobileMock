@@ -32,6 +32,8 @@ var swiper = new Swiper(".mySwiper", {
    on:{
       slideChange:()=>{
          progress.stop().css({width:0}).animate({width:'100%'},5000);
+         btn.addClass('play');
+         btn.text('정지');
       }
    }
  });
@@ -41,7 +43,7 @@ btn.click(function(){
       swiper.autoplay.stop();
       $(this).removeClass('play');
       $(this).text('재생');
-      progress.stop().animate({width:0})
+      progress.stop().css({width:0})
    }else{
       swiper.autoplay.start();
       $(this).addClass('play');
@@ -64,30 +66,24 @@ $(window).scroll(function(){
          topBtn.addClass('fix-top')
        }else{
          topBtn.removeClass('fix-top')
-       }
-       
+       }       
    });
-// 라이브 상품들 정렬
-// $('.live-content').masonry({
-//    itemSelector:'li', //이미지가 포함된 엘리먼트
-//    gutter: 0, //margin
-//    horizontalOrder:true //순서대로 정렬   
-// });
+// 맨위로 버튼
+topBtn.click(function(){
+   $('html,body').animate({ scrollTop : $('body').offset().top-500},500);
+});
 
+// 라이브 상품들 정렬 masonry 라이브러리 사용
 var msnry = new Masonry( '.live-content', {
    itemSelector: 'li',
    // columnWidth: 200
    percentPosition: true,
-   gutter : 0,
+   gutter : 5,
    });
    imagesLoaded( '.live-content' ).on( 'progress', function() {
       msnry.layout();
    });
-
-$('.top-btn').click(function(){
-   $('html,body').animate({ scrollTop : $('body').offset().top-500},500);
-});
-
+   
 // 맥딜리버리 / 매장찾기 하단메뉴 이벤트
 var pScrollTop = 0,
         delta = 10;									// 이벤트를 발생시킬 스크롤의 이동 범위
@@ -101,5 +97,3 @@ $(window).scroll(function(){
 	}
 	pScrollTop = sc;										// 현재 멈춘 위치를 기준점으로 재설정
 });
-
-
