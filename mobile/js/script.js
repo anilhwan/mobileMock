@@ -35,6 +35,7 @@ var swiper = new Swiper(".mySwiper", {
          progress.stop().css({width:0}).animate({width:'100%'},5000);
          btn.addClass('play');
          btn.text('정지');
+         swiper.autoplay.start();
       }
    }
  });
