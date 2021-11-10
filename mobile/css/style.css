@@ -1,6 +1,7 @@
 @charset "utf-8";
 body{overflow-y: scroll;}
-.header{height: 62px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed;top: 0;left: 0;}
+#wrap{max-width: 1000px; width: 100%; margin: 0 auto;}
+.header{height: 62px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed;top: 0;left: 50%; transform: translateX(-50%); max-width: 1000px; z-index: 99999;}
 .scroll{overflow: hidden; height: 100%;}
 .fix{border-bottom: 1px solid #ddd;background-color: #fff; z-index: 9999999;}
 .logo{width: 74px;height: 62px;}
@@ -14,16 +15,25 @@ body{overflow-y: scroll;}
 .menu-box.add .line2{opacity: 0; top: 50%;}
 .menu-box.add .line3{transform: rotate(45deg); top: 50%;}
 /* 사이드메뉴 */
-.side-menu{width: 100%;height: 100%; display:none;background-color: #fff;position: fixed;top: 62px;left:0;transition: 0.3s; z-index: 999;}
+.side-menu{width: 100%;height: 100%; display:none;background-color: #fff;position: fixed;top:0;left:50%;transition: 0.3s; z-index: 999; transform: translateX(-50%); max-width: 1000px;}
 .side-menu.slide{display: block;}
-.menu-list{padding: 25px 30px 0}
+.menu-list{padding: 85px 30px 0}
 .menu-contents>li{ font-size: 35px; text-align: left; font-weight: bold;}
-.menu-contents>li>a{display: block; border-bottom: 1px solid #e1e1e1;padding: 25px 0 15px 5px;}
+.menu-contents>li>a{display: block; border-bottom: 1px solid #e1e1e1;padding: 20px 0;}
 .menu-contents>li>ul{display: none; padding: 14px 0 43px; border-bottom: 1px solid #e1e1e1; overflow: hidden;}
 .menu-contents>li>ul li{width: 50%; float: left;}
 .menu-contents>li>ul li a{width: 100%; padding:18px 0; display: block; font-weight: 500; font-size: 20px; color: #333;}
 /* 사이드메뉴 검색 */
-
+.search{position: fixed; bottom: 82px; width: 100%; height: 70px; background: #f5bd43;max-width: 1000px;}
+.search-box{position: relative;padding-right: 96px;}
+.search-box button{background:url(../img/search.png) no-repeat; width: 96px;height: 70px; background-size: 96px 70px; position: absolute; top: 0;right: 0;}
+fieldset{border: none;}
+input{border: none; padding-left: 35px;height: 70px;font-weight: 500; background:none; outline: none; width: 100%; color: #000;}
+input::placeholder {color:#000;}
+input::-ms-placeholder {color:#000;}
+input::-webkit-placeholder {color:#000;}
+.nav-menu{position: fixed; bottom: 0; width: 100%;height: 82px; background-color: #292929; max-width: 1000px;}
+.nav-menu a{float: left; text-align: center; width: 25%; color: #6c6c6c; line-height:82px;}
 /* 메인페이지 */
 .main-slide{width: 100%;height: 100%;padding-top:62px;}
 .mc-live{padding:0 15px 70px;margin-top: 50px; position: relative;}
@@ -50,7 +60,7 @@ body{overflow-y: scroll;}
 .fix-top{position: absolute;bottom: 140px; right: 20px;}
 
 /* 맥딜리버리 매장찾기 메뉴 */
-.down-menu{position: fixed; bottom: -60px; width: 100%; transition: all .3s;}
+.down-menu{position: fixed; bottom: -60px; width: 100%; transition: all .3s; max-width: 1000px;}
 
 .down-menu a{float: left; width: 50%; height: 60px; text-align: center; font-weight: 600; line-height: 60px;color: #fff;}
 .down-menu a.delivery{background:#c70006;}
