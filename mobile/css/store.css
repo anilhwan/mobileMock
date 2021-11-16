@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{overflow-y: scroll;}
-#wrap{max-width: 1000px; width: 100%; margin: 0 auto;}
+#wrap{max-width: 1000px; width: 100%; margin: 0 auto; padding:0 15px;}
 .header{height: 62px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed;top: 0;left: 50%; transform: translateX(-50%); max-width: 1000px; z-index: 99999;}
 .scroll{overflow: hidden; height: 100%;}
 .fix{border-bottom: 1px solid #ddd;background-color: #fff; z-index: 9999999;}
@@ -47,6 +47,14 @@ input::-webkit-placeholder {color:#000;}
 .box-position{position: relative;}
 .map-search input{background: #fff; border: 1px solid #ddd; border-radius: 50px; height: 60px; padding-left: 20px;}
 .map-search-box button{background:url(../img/color-search.png) no-repeat; width: 70px;height: 60px; background-size: 70px 60px; position: absolute; top: 0;right: 0;}
+/* 내위치 버튼 */
+.gps-read{display: inline-block;
+    width: 223px;
+    height: 45px;
+    margin-top: 20px;
+    background: #ffba29;
+    border-radius: 50px;}
+.gps-read span{display: block; padding-left: 15px;font-size: 12px;background: url(../img/map-ico.png) no-repeat 20px 50%; background-size: 20px; font-weight: 600;letter-spacing: -1px;line-height: 45px;}
 /* 맥딜리버리 매장찾기 메뉴 */
 .down-menu{position: fixed; bottom: -60px; width: 100%; transition: all .3s; max-width: 1000px;}
 .down-menu a{float: left; width: 50%; height: 60px; text-align: center; font-weight: 600; line-height: 60px;color: #fff;}
