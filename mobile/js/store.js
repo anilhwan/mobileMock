@@ -47,31 +47,54 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                       level: 3, // 지도의 확대 레벨
                       mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
                   }; 
-              // 지도를 생성한다 
-              var map = new kakao.maps.Map(mapContainer, mapOption);
+// 지도를 생성한다 
+var map = new kakao.maps.Map(mapContainer, mapOption);
 
-              function locationLoadSuccess(pos){
-                  // 현재 위치 받아오기
-                  var currentPos = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
-              
-                  // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
-                  map.panTo(currentPos);
-              
-                  // 마커 생성
-                  var marker = new kakao.maps.Marker({
-                      position: currentPos
-                  });
-              
-                  // 기존에 마커가 있다면 제거
-                  marker.setMap(null);
-                  marker.setMap(map);
-              };
-              
-              function locationLoadError(pos){
-                  alert('위치 정보를 가져오는데 실패했습니다.');
-              };
-              
-              // 위치 가져오기 버튼 클릭시
-              function getCurrentPosBtn(){
-                  navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
-              };
+function locationLoadSuccess(pos){
+   // 현재 위치 받아오기
+   var currentPos = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
+
+   // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
+   map.panTo(currentPos);
+
+   // 마커 생성
+   var marker = new kakao.maps.Marker({
+         position: currentPos
+   });
+
+   // 기존에 마커가 있다면 제거
+   marker.setMap(null);
+   marker.setMap(map);
+};
+
+function locationLoadError(pos){
+   alert('위치 정보를 가져오는데 실패했습니다.');
+};
+
+// 위치 가져오기 버튼 클릭시
+function getCurrentPosBtn(){
+   navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
+};
+function setMapType(maptype) { 
+   var roadmapControl = document.getElementById('btnRoadmap');
+   var skyviewControl = document.getElementById('btnSkyview'); 
+   if (maptype === 'roadmap') {
+       map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+       roadmapControl.className = 'selected_btn';
+       skyviewControl.className = 'btn';
+   } else {
+       map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+       skyviewControl.className = 'selected_btn';
+       roadmapControl.className = 'btn';
+   }
+}
+
+// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomIn() {
+   map.setLevel(map.getLevel() - 1);
+}
+
+// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomOut() {
+   map.setLevel(map.getLevel() + 1);
+}
