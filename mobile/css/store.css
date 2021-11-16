@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{overflow-y: scroll;}
-#wrap{max-width: 1000px; width: 100%; margin: 0 auto; padding:0 10px;}
+#wrap{max-width: 1000px; width: 100%; margin: 0 auto;}
 .header{height: 62px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed;top: 0;left: 50%; transform: translateX(-50%); max-width: 1000px; z-index: 99999;}
 .scroll{overflow: hidden; height: 100%;}
 .fix{border-bottom: 1px solid #ddd;background-color: #fff; z-index: 9999999;}
@@ -43,7 +43,7 @@ input::-webkit-placeholder {color:#000;}
 .city-menu li a{font-size: 15px; color: #808080;}
 .city-menu li.on a{color: #ffbc0d; font-weight: 600; border-bottom: 1px solid #ffbc0d;}
 /* 검색 박스 */
-.map-search{background: #f8f8f8; padding: 40px 15px; position: relative;}
+.map-search{background: #f8f8f8; padding: 40px 15px; position: relative; margin-bottom: 30px;}
 .box-position{position: relative;}
 .map-search input{background: #fff; border: 1px solid #ddd; border-radius: 50px; height: 60px; padding-left: 20px;}
 .map-search-box button{background:url(../img/color-search.png) no-repeat; width: 70px;height: 60px; background-size: 70px 60px; position: absolute; top: 0;right: 0;}
