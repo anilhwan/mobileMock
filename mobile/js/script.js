@@ -7,7 +7,6 @@ slide.click(function(){
     } else{
        $(this).children('ul').slideUp();
     }
-    return false;
  });
 
 $('.menu-box').click(function(){
